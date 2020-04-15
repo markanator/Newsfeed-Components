@@ -88,6 +88,88 @@ const data = [
   }
 ];
 
+// creating parent div class
+
+function createArticle(article) {
+let articleParent = document.createElement('div');
+    articleParent.classList.add('article');
+// creating children elements
+let titleHeader = document.createElement('h2');
+    titleHeader.classList.add('date');
+
+let datePar    = document.createElement('p');
+    datePar.classList.add('date');
+
+let firstPar   = document.createElement('p');
+let secondPar  = document.createElement('p');
+let thirdPar   = document.createElement('p');
+
+let spanButton = document.createElement('p');
+    spanButton.classList.add('expandButton');
+
+// attaching children to parent
+articleParent.appendChild(datePar);
+articleParent.appendChild(firstPar);
+articleParent.appendChild(secondPar);
+articleParent.appendChild(thirdPar);
+articleParent.appendChild(spanButton);
+
+// creating custom content
+titleHeader.textContent = article.title;
+datePar.textContent     = article.date;
+firstPar.textContent    = article.firstParagraph;
+secondPar.textContent   = article.secondParagraph;
+thirdPar.textContent    = article.thirdParagraph;
+
+
+//event Listener
+spanButton.addEventListener('click',(event)=>{
+  articleParent.classList.toggle('article-open');
+});
+
+return articleParent;
+}
+
+let articleSection = document.querySelector('.articles');
+
+let freshArticle = {
+  title: 'Game Development Software  in 2020',
+  date: 'Apr 14, 2020',
+  firstParagraph: `Pokem ipsum dolor sit amet Slash Excadrill Gligar Minun Pallet Town Swinub.
+  Pokemon Scraggy Fire Red Trubbish Pokemon Garbodor Murkrow. 
+  Water Gun but nothing happened Shelmet sunt in culpa qui officia Karrablast Torterra Clefairy.
+  Duis aute irure dolor in reprehenderit in voluptate Splash Mandibuzz Ultra Ball Kadabra Numel deserunt mollit.
+  Silver Prinplup Breloom Mawile Water Volbeat Shroomish.`,
+
+  secondParagraph: `Hodor, hodor. Hodor. Hodor, hodor, hodor. Hodor hodor, hodor. Hodor hodor, hodor, hodor hodor. Hodor! Hodor hodor, hodor;
+                    hodor hodor hodor? Hodor, hodor. Hodor. Hodor, hodor - HODOR hodor, hodor hodor hodor! Hodor, hodor. Hodor. Hodor, HODOR
+                    hodor, hodor hodor, hodor, hodor hodor. Hodor hodor - hodor - hodor... Hodor hodor hodor hodor hodor hodor hodor?! Hodor
+                    hodor - hodor hodor hodor. Hodor. Hodor hodor... Hodor hodor hodor hodor hodor? `,
+
+  thirdParagraph: `Glacier Badge Pokemon Fan Club Chairman Glaceon Calcium Wobbuffet Bayleef Swellow. 
+                  Quis nostrud exercitation ullamco laboris nisi Bellossom Meloetta Zigzagoon Latios Basculin Natu. 
+                  Ash Granbull Castform Mirror Move Growlithe Venusaur Honchkrow. 
+                  Glacier Badge a wild Pokemon appeared Tangela Taillow Geodude Vigoroth Lombre. 
+                  Volcano Badge Pokemon Magby Kecleon Togekiss Typhlosion Zweilous.`
+};
+
+data.push(freshArticle);
+
+let dataToArticle = data.map((index)=>{
+
+  let tempArticle = createArticle(index);
+  articleSection.appendChild(tempArticle);
+
+});
+
+
+
+
+console.log(data);
+
+
+
+
 /* Step 1: Create a function that creates a component. You will want your component to look like the template below: 
   
   <div class="article">
@@ -98,6 +180,9 @@ const data = [
 
     <span class='expandButton'></span>
   </div>
+
+
+
 
   Hint: You will need to use createElement more than once here!
 
