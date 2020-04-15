@@ -95,7 +95,7 @@ let articleParent = document.createElement('div');
     articleParent.classList.add('article');
 // creating children elements
 let titleHeader = document.createElement('h2');
-    titleHeader.classList.add('date');
+    titleHeader.classList.add('title');
 
 let datePar    = document.createElement('p');
     datePar.classList.add('date');
@@ -108,6 +108,7 @@ let spanButton = document.createElement('p');
     spanButton.classList.add('expandButton');
 
 // attaching children to parent
+articleParent.appendChild(titleHeader);
 articleParent.appendChild(datePar);
 articleParent.appendChild(firstPar);
 articleParent.appendChild(secondPar);
@@ -161,11 +162,6 @@ let dataToArticle = data.map((index)=>{
   articleSection.appendChild(tempArticle);
 
 });
-
-
-
-
-console.log(data);
 
 
 
