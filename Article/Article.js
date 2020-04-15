@@ -104,7 +104,7 @@ let firstPar   = document.createElement('p');
 let secondPar  = document.createElement('p');
 let thirdPar   = document.createElement('p');
 
-let spanButton = document.createElement('p');
+let spanButton = document.createElement('span');
     spanButton.classList.add('expandButton');
 
 // attaching children to parent
@@ -137,10 +137,10 @@ let freshArticle = {
   title: 'Game Development Software  in 2020',
   date: 'Apr 14, 2020',
   firstParagraph: `Pokem ipsum dolor sit amet Slash Excadrill Gligar Minun Pallet Town Swinub.
-  Pokemon Scraggy Fire Red Trubbish Pokemon Garbodor Murkrow. 
-  Water Gun but nothing happened Shelmet sunt in culpa qui officia Karrablast Torterra Clefairy.
-  Duis aute irure dolor in reprehenderit in voluptate Splash Mandibuzz Ultra Ball Kadabra Numel deserunt mollit.
-  Silver Prinplup Breloom Mawile Water Volbeat Shroomish.`,
+                    Pokemon Scraggy Fire Red Trubbish Pokemon Garbodor Murkrow. 
+                    Water Gun but nothing happened Shelmet sunt in culpa qui officia Karrablast Torterra Clefairy.
+                    Duis aute irure dolor in reprehenderit in voluptate Splash Mandibuzz Ultra Ball Kadabra Numel deserunt mollit.
+                    Silver Prinplup Breloom Mawile Water Volbeat Shroomish.`,
 
   secondParagraph: `Hodor, hodor. Hodor. Hodor, hodor, hodor. Hodor hodor, hodor. Hodor hodor, hodor, hodor hodor. Hodor! Hodor hodor, hodor;
                     hodor hodor hodor? Hodor, hodor. Hodor. Hodor, hodor - HODOR hodor, hodor hodor hodor! Hodor, hodor. Hodor. Hodor, HODOR

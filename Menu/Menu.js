@@ -19,6 +19,9 @@ function createMenuComponent(inputArray){
 
   menuParent.appendChild(uList);
 
+
+
+  
   //iterate over data
   inputArray.forEach((item)=>{
 
@@ -28,6 +31,9 @@ function createMenuComponent(inputArray){
     //add list item to unordered list
     uList.appendChild(listItem);
   });
+
+
+
 
   //step 3
   let menuButton = document.querySelector('.menu-button');
